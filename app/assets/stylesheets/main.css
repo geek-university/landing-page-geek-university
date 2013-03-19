@@ -1,0 +1,22 @@
+html,body {
+    height: 100%;
+    background: black;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.content {
+    background: url('/assets/chalkboard.jpg');
+    background-repeat: no-repeat;
+    background-size:1200px 890px;
+    height: 100%;
+    width: 70%;
+    padding: 200px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-inner {
+}
