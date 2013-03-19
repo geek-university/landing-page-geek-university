@@ -8,18 +8,22 @@ class SubscriptionsController < ApplicationController
   end
 
   def create
-    @subscription = Subscription.create(params[:subscription])
-    email = @subscription.email
-    SubscriptionMailer.welcome_email(email).deliver
-    SubscriptionMailer.new_user_email(email).deliver
-    respond_to do |format|
-      format.json {
-        render json: (MESSAGE % email).to_json, status: :ok
-      }
-      format.html {
-        flash[:notice] = MESSAGE % email
-        redirect_to :root
-      }
+    @subscription = Subscription.new(params[:subscription])
+    if @subscription.save
+      email = @subscription.email
+      SubscriptionMailer.welcome_email(email).deliver
+      SubscriptionMailer.new_user_email(email).deliver
+      respond_to do |format|
+        format.json {
+          render json: (MESSAGE % email).to_json, status: :ok
+        }
+        format.html {
+          flash[:notice] = MESSAGE % email
+          redirect_to :root
+        }
+      end
+    else
+      render :new
     end
   end
 end
