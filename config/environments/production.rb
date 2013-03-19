@@ -66,10 +66,12 @@ LandingPageGeekUniversity::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   ActionMailer::Base.smtp_settings = {
-      :address  => "smtp.someserver.net",
-      :port  => 25,
-      :user_name  => "someone@someserver.net",
-      :password  => "mypass",
-      :authentication  => :login
+      :address        => 'smtp.sendgrid.net',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
+      :domain         => 'heroku.com',
+      :enable_starttls_auto => true
   }
 end
