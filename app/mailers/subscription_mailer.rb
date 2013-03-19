@@ -1,7 +1,7 @@
 class SubscriptionMailer < ActionMailer::Base
   default from: 'notifications@geek-university.org'
 
-  ADMIN_EMAIL = 'YankovskyAndrey@gmail.com'
+  ADMIN_EMAIL = 'geek.university.org@gmail.com'
 
   def welcome_email(email)
     @url  = 'http://www.geek-university.org/'
