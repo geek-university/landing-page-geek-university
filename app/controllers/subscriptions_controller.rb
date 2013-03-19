@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class SubscriptionsController < ApplicationController
-  MESSAGE = 'Спасибо! Мы сообщим вам об открытии университета, отправив письмо на почту %s! Не хотите ли поделиться новостью с кем-нибудь ещё?'
+  MESSAGE = 'Спасибо!<br/>Мы сообщим вам об открытии университета,<br/>отправив письмо на почту %s!<br/>Не хотите ли поделиться новостью с кем-нибудь ещё?'
 
   def new
     @subscription = Subscription.new

@@ -10,10 +10,10 @@ html,body {
 .content {
     background: url('/assets/chalkboard.jpg');
     background-repeat: no-repeat;
-    background-size:1200px 890px;
-    height: 100%;
+    background-size: contain;
     width: 70%;
     padding: 200px 0 0 0;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
 }
