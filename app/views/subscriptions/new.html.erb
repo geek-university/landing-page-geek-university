@@ -1,7 +1,7 @@
 <pre>
     Мы классные ололо. Пыщ пыщ уруру.
 </pre>
-<%= form_for @subscription, remote: true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
+<%= form_for @subscription, remote: true, :validate => true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
     <%= f.label :email, 'Оповестить об открытии университета' %>
     <div>
         <%= f.text_field :email, placeholder: 'email' %>
