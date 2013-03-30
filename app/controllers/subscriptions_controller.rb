@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class SubscriptionsController < ApplicationController
-  MESSAGE = 'Спасибо!<br/>Мы сообщим вам об открытии университета,<br/>отправив письмо на почту %s!<br/>Не хотите ли поделиться новостью с кем-нибудь ещё?'
+  MESSAGE = 'На указанную почту отправлено письмо'
 
   def new
     @subscription = Subscription.new
@@ -15,15 +15,22 @@ class SubscriptionsController < ApplicationController
       SubscriptionMailer.new_user_email(email).deliver
       respond_to do |format|
         format.json {
-          render json: (MESSAGE % email).to_json, status: :ok
+          render json: MESSAGE.to_json, status: :ok
         }
         format.html {
-          flash[:notice] = MESSAGE % email
+          flash[:notice] = MESSAGE
           redirect_to :root
         }
       end
     else
-      render :new
+      respond_to do |format|
+        format.json {
+          render json: {errors: @subscription.errors}, status: 422
+        }
+        format.html {
+          render :new
+        }
+      end
     end
   end
 end

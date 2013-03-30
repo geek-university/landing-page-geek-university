@@ -1,6 +1,18 @@
-<%= form_for @subscription, remote: true, :validate => true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
-    <div class="email-input">
-        <%= f.text_field :email, placeholder: 'email' %>
-        <%= f.submit 'Присоединиться', id: 'subscribe-button' %>
-    </div>
-<% end %>
+<div class="parallax-viewport" id="parallax" style="min-height: 1000px;">
+  <div class="parallax-layer" style="width: 2000px;">
+    <img src="/assets/background2.jpg">
+  </div>
+  <div class="parallax-layer" style="width: 2300px; bottom: -80px;">
+    <img src="/assets/footer2.png" WIDTH="1600">
+  </div>
+  <div class="parallax-layer" style="width: 1000px;">
+    <img src="/assets/sovushka_s_pismom2.png" style="width: 1000px;">
+  </div>
+</div>
+<!--
+<div id="owl-with-letter">
+  <%= form_for @subscription, remote: true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
+      <%= f.text_field :email, placeholder: 'Введите ваш email' %>
+      <%= f.submit 'Отправить', id: 'subscribe-button', disabled: 'disabled' %>
+  <% end %>
+</div>-->

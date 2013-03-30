@@ -7,17 +7,12 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="content">
-      <div class="content-inner">
-        <div id="thank-you-div">
-          <%- if notice %>
-              <p><%= notice %></p>
-          <%- end %>
-        </div>
+    <%- if notice %>
+        <p><%= notice %></p>
+    <%- end %>
 
-        <%= yield %>
-      </div>
-    </div>
+    <%= yield %>
+
     <%= javascript_include_tag 'application' %>
   </body>
 </html>

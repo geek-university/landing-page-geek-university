@@ -1,5 +1,5 @@
 class SubscriptionMailer < ActionMailer::Base
-  default from: 'notifications@geek-university.org'
+  default from: 'geek.university.org@gmail.com'
 
   ADMIN_EMAIL = 'geek.university.org@gmail.com'
 
