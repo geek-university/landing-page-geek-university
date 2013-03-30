@@ -66,11 +66,12 @@ $(document).ready(function() {
         yorigin: 0.5
     }, {
         xparallax: 0.2,
-        yparallax: 0,
-        xorigin: 0.5
+        yparallax: -0.1,
+        xorigin: 0.5,
+        yorigin: 1.0
     }, {
-        xparallax: 0.1,
-        yparallax: 0.1,
+        xparallax: 0,
+        yparallax: 0,
         xorigin: 0.5,
         yorigin: 0
     })
