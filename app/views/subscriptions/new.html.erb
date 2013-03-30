@@ -2,20 +2,16 @@
   <div class="parallax-layer" style="width: 2000px; left: 40%; margin-left: -800px; margin-top: 0;">
     <img src="/assets/background2.jpg">
   </div>
-  <div class="parallax-layer" style="width: 2300px; bottom: -80px; left: 40%; margin-left: -920px;">
-    <img src="/assets/footer2.png" WIDTH="1600">
+  <div id="footer" class="parallax-layer" style="width: 2300px;bottom: -80px; left: 40%; margin-left: -920px;">
+    <img src="/assets/footer2.png" width="1600">
   </div>
-  <div class="parallax-layer additional-object" style="width: 300px; left: 8%; top: 50%;">
-    <img src="/assets/oblako_1.png" style="width: 400px;">
+  <div id="oblako1" class="parallax-layer additional-object" style="width: 300px; left: 8%; top: 50%;">
   </div>
-  <div class="parallax-layer additional-object" style="width: 300px; left: 80%; top: 5%;">
-    <img src="/assets/oblako_2.png" style="width: 300px;">
+  <div id="oblako2" class="parallax-layer additional-object" style="width: 300px; left: 80%; top: 5%;">
   </div>
-  <div class="parallax-layer additional-object" style="width: 300px; left: 8%; top: 1%;">
-    <img src="/assets/parashutist.png" style="width: 200px;">
+  <div id="parashutist" class="parallax-layer additional-object" style="width: 300px; left: 8%; top: 1%;">
   </div>
-  <div class="parallax-layer additional-object" style="width: 200px; left: 75%; top: 40%;">
-    <img src="/assets/vosdushnii_shar.png" style="width: 150px;">
+  <div id="vosdushnii-shar" class="parallax-layer additional-object" style="width: 200px; left: 75%; top: 40%;">
   </div>
   <div style="width: 1000px; margin: 0 auto; position: relative;">
     <%= form_for @subscription, remote: true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
