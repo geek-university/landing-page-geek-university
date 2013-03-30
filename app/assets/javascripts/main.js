@@ -70,9 +70,24 @@ $(document).ready(function() {
         xorigin: 0.5,
         yorigin: 1.0
     }, {
-        xparallax: 0,
-        yparallax: 0,
-        xorigin: 0.5,
-        yorigin: 0
+        xparallax: 0.1,
+        yparallax: -0.13,
+        xorigin: 0.07,
+        yorigin: 0.6
+    }, {
+        xparallax: 0.1,
+        yparallax: -0.1,
+        xorigin: 1,
+        yorigin: 0.1
+    }, {
+        xparallax: 0.1,
+        yparallax: -0.2,
+        xorigin: 0.1,
+        yorigin: 0.1
+    }, {
+        xparallax: 0.2,
+        yparallax: -0.24,
+        xorigin: 1,
+        yorigin: 0.4
     })
 });

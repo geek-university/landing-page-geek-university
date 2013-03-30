@@ -1,18 +1,35 @@
-<div class="parallax-viewport" id="parallax" style="min-height: 1000px;">
+<div class="parallax-viewport" id="parallax" style="min-height: 950px;">
   <div class="parallax-layer" style="width: 2000px;">
     <img src="/assets/background2.jpg">
   </div>
   <div class="parallax-layer" style="width: 2300px; bottom: -80px;">
     <img src="/assets/footer2.png" WIDTH="1600">
   </div>
-  <div class="parallax-layer" style="width: 1000px; left: 450px">
-    <img src="/assets/sovushka_s_pismom2.png" style="width: 1000px;">
+  <div class="parallax-layer" style="width: 300px;">
+    <img src="/assets/oblako_1.png" style="width: 400px;">
+  </div>
+  <div class="parallax-layer" style="width: 300px;">
+    <img src="/assets/oblako_2.png" style="width: 300px;">
+  </div>
+  <div class="parallax-layer" style="width: 300px;">
+    <img src="/assets/parashutist.png" style="width: 200px;">
+  </div>
+  <div class="parallax-layer" style="width: 200px;">
+    <img src="/assets/vosdushnii_shar.png" style="width: 150px;">
+  </div>
+  <div style="width: 1000px; margin: 0 auto; position: relative;">
+    <%= form_for @subscription, remote: true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
+        <img src="/assets/sovushka_s_pismom2.png" style="width: 1000px;">
+        <input type="text" id="subscription_email" placeholder="Введите ваш email" style="position: absolute; left: 210px; top: 660px; font-size: 20px;">
+        <input type="submit" id="subscribe-button" disabled="disabled" value="Отправить" style="position: absolute; left: 550px; top: 660px; font-size: 20px;">
+    <% end %>
   </div>
 </div>
+
 <!--
-<div id="owl-with-letter">
-  <%= form_for @subscription, remote: true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
-      <%= f.text_field :email, placeholder: 'Введите ваш email' %>
-      <%= f.submit 'Отправить', id: 'subscribe-button', disabled: 'disabled' %>
-  <% end %>
-</div>-->
+
+<%= form_for @subscription, remote: true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
+    <img src="/assets/sovushka_s_pismom2.png" style="width: 1000px;">
+    <%= f.text_field :email, placeholder: 'Введите ваш email' %>
+    <%= f.submit 'Отправить', id: 'subscribe-button', disabled: 'disabled' %>
+<% end %>-->
