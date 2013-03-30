@@ -70,8 +70,8 @@ $(document).ready(function() {
         xorigin: 0.5,
         yorigin: 1.0
     }, {
-        xparallax: 0.1,
-        yparallax: -0.13,
+        xparallax: 0.2,
+        yparallax: -0.15,
         xorigin: 0.07,
         yorigin: 0.6
     }, {
