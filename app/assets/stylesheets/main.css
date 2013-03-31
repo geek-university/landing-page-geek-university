@@ -30,6 +30,13 @@ html,body {
 .parallax-layer img {
 }
 
+#thank-you {
+    background: black;
+    color: white;
+    width: 600px;
+    height: 50px;
+}
+
 @media only screen
 and (max-width : 1400px) {
     .additional-object {
