@@ -9,25 +9,42 @@ html,body {
 }
 
 #owl-with-letter {
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-    height: 500px;
-    background-color: red;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
 }
 
-.parallax-viewport {
+#owl-with-letter div {
+    margin: 0 auto;
+    position: relative;
+}
+
+#owl-with-letter div * {
+    position: absolute;
+}
+
+#owl-with-letter #owl {
+    top: 40px;
+}
+
+#owl-with-letter #letter {
+    top: 300px;
+}
+
+#container{
     position: relative;     /* relative, absolute, fixed */
     overflow: hidden;
     width: 100%;
     height: 100%;
 }
-.parallax-layer {
+
+#container .plax-item {
     position: absolute;
     z-index: -1;
 }
 
-.parallax-layer img {
+#container div img {
+    margin: 0 auto;
 }
 
 #thank-you {

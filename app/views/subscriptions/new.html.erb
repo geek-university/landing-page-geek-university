@@ -1,7 +1,26 @@
-<div class="parallax-viewport" id="parallax" style="min-height: 950px;">
-  <div class="parallax-layer" style="width: 2000px; left: 40%; top: 40%; margin-left: -800px; margin-top: -600px;">
-    <img src="/assets/background2.jpg">
+<div id="container">
+<!--
+  <div id="background"></div>
+  <div id="footer"></div>
+  <div id="oblako1"></div>
+  <div id="oblako2"></div>
+  <div id="parashutist"></div>
+  <div id="vosdushnii-shar"></div>
+  <div id="oblako-text"></div>
+-->
+
+  <div id="owl-with-letter">
+    <div>
+      <img src="/assets/sovushka4.png" id="owl">
+      <img src="/assets/letter5.png" id="letter">
+        <input type="text" id="subscription_email" placeholder="Введите ваш email" style="position: absolute; left: 100px; top: 260px; font-size: 20px;">
+        <input type="submit" id="subscribe-button" disabled="disabled" value="Отправить" style="background-image: url('/assets/button.png'); width: 300px; height: 66px; position: absolute; left: 550px; top: 660px; font-size: 20px;">
+        <div id="thank-you" style="display: none; position: absolute; left: 200px; top: 660px; font-size: 20px;">
+          Мудрая совушка довольна
+        </div>
+    </div>
   </div>
+  <!--
   <div id="footer" class="parallax-layer" style="width: 2300px;bottom: -80px; left: 40%; margin-left: -920px;">
     <img src="/assets/footer2.png" width="1600">
   </div>
@@ -14,21 +33,5 @@
   <div id="vosdushnii-shar" class="parallax-layer additional-object" style="width: 200px; left: 75%; top: 40%;">
   </div>
   <div style="width: 1000px; margin: 0 auto; position: relative;">
-    <%= form_for @subscription, remote: true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
-        <img src="/assets/sovushka_s_pismom2.png" style="width: 1000px;">
-        <input type="text" id="subscription_email" placeholder="Введите ваш email" style="position: absolute; left: 210px; top: 660px; font-size: 20px;">
-        <input type="submit" id="subscribe-button" disabled="disabled" value="Отправить" style="position: absolute; left: 550px; top: 660px; font-size: 20px;">
-        <div id="thank-you" style="display: none; position: absolute; left: 200px; top: 660px; font-size: 20px;">
-          Мудрая совушка довольна
-        </div>
-    <% end %>
-  </div>
+  </div>-->
 </div>
-
-<!--
-
-<%= form_for @subscription, remote: true, :html => {:'data-type' => 'json', :multipart => true} do |f| %>
-    <img src="/assets/sovushka_s_pismom2.png" style="width: 1000px;">
-    <%= f.text_field :email, placeholder: 'Введите ваш email' %>
-    <%= f.submit 'Отправить', id: 'subscribe-button', disabled: 'disabled' %>
-<% end %>-->

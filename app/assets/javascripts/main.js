@@ -35,7 +35,7 @@ $(document).ready(function () {
             $.post('/subscriptions', {"subscription[email]": email.val()}, function (response) {
                 $("#thank-you").fadeIn();
                 email.val('');
-                setTimeout(function() {
+                setTimeout(function () {
                     $('#thank-you').fadeOut();
                 }, 4000);
             });
@@ -46,27 +46,42 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     if (window.innerWidth >= 1400) {
-        var images = [
-            {src: "/assets/oblako_1.png", id: "oblako1", width: 400 },
-            {src: "/assets/oblako_2.png", id: "oblako2", width: 300 },
-            {src: "/assets/parashutist.png", id: "parashutist", width: 200},
-            {src: "/assets/vosdushnii_shar.png", id: "vosdushnii-shar", width: 150}
+        var imgObjects = [
+            {id: "background", src: "/assets/background2.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
+            {id: "footer", src: "/assets/gorod3.png", xRange: 160, yRange: 140, left: -80, bottom: -70, invert: true, width: "2000" },
+            {id: "oblako1", src: "/assets/oblako_1.png", xRange: 10, yRange: 10, top: 0, left: 0  },
+            {id: "oblako2", src: "/assets/oblako_2.png", xRange: 10, yRange: 10, top: 0, left: 0  },
+            {id: "parashutist", src: "/assets/parashutist2.png", xRange: 10, yRange: 10, top: 0, left: 0  },
+            {id: "vosdushnii-shar", src: "/assets/vosdushnii_shar3.png", xRange: 10, yRange: 10, top: 0, left: 0  },
+            {id: "oblako-text", src: "/assets/oblako-text.png", xRange: 30, yRange: 30, top: 350, left: 1230  }
         ];
-        for (var i = 0; i < images.length; i++) {
-            var img = images[i];
-            var imgObj = new Image();
-            (function (img) {
-                imgObj.onload = function (e) {
-                    var image = $(this).width(50).css("opacity", 0);
-                    $("#" + img.id).append(image);
+        for (var i = 0; i < imgObjects.length; i++) {
+            var imgObject = imgObjects[i];
+            var img = new Image();
+            (function (imgObject) {
+                img.onload = function () {
+                    var id = "#" + imgObject.id;
+                    $(id).prepend($(this)).css({
+                        opacity: 0,
+                        left: imgObject.left,
+                        top: imgObject.top,
+                        bottom: imgObject.bottom,
+                        width: imgObject.width,
+                        zIndex: imgObject.zIndex,
+                        position: imgObject.position
+                    }).addClass("plax-item")
+                        .plaxify({"xRange": imgObject.xRange, "yRange": imgObject.yRange, invert: true})
+                        .animate({
+                            opacity: 1
+                        }, getRandomInt(1000, 2000), "swing");
 
-                    image.animate({
+/*                    image.animate({
                             opacity: 1,
                             width: img.width
                         }, getRandomInt(1000, 2000), "swing", function () {
                             var endless = function () {
                                 image.animate({
-                                    width: getRandomInt(img.width - 15, img.width + 15),
+                                    width: getRandomInt(imgObject.width - 15, imgObject.width + 15),
                                     paddingTop: getRandomInt(-10, 10)
                                 }, getRandomInt(600, 1000), "swing", function () {
                                     endless()
@@ -74,49 +89,13 @@ $(document).ready(function () {
                             };
                             endless();
                         }
-                    );
-
-
+                    );*/
                 }
-            }(img));
-
-            imgObj.src = img.src;
+            }(imgObject));
+            img.src = imgObject.src;
         }
+        $.plax.enable()
     }
-
-    $(".parallax-layer").parallax({
-        mouseport: $('#parallax')
-    }, {
-        xparallax: 0.2,
-        yparallax: 0.2,
-        xorigin: 0.5,
-        yorigin: 0.5
-    }, {
-        xparallax: 0.2,
-        yparallax: -0.1,
-        xorigin: 0.5,
-        yorigin: 1.0
-    }, {
-        xparallax: 0.1,
-        yparallax: -0.08,
-        xorigin: 0.07,
-        yorigin: 0.6
-    }, {
-        xparallax: 0.05,
-        yparallax: -0.05,
-        xorigin: 1,
-        yorigin: 0.1
-    }, {
-        xparallax: 0.05,
-        yparallax: -0.1,
-        xorigin: 0.1,
-        yorigin: 0.1
-    }, {
-        xparallax: 0.1,
-        yparallax: -0.12,
-        xorigin: 1,
-        yorigin: 0.4
-    })
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
