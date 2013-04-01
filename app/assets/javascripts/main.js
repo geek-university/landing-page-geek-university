@@ -4,7 +4,7 @@ $(function ($) {
 
 
     $email.focus().bind('change focus blur keyup keypress click timer', function () {
-        $submit.attr("disabled", isCorrectEmail($email.val()));
+        $submit.attr("disabled", !isCorrectEmail($email.val()));
     })
 
     setInterval(function () {
