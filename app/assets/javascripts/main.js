@@ -38,10 +38,9 @@ $(document).ready(function () {
         var imgObjects = [
             {id: "background", src: "/assets/background2.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
             {id: "footer", src: "/assets/gorod3.png", xRange: 160, yRange: 140, left: -80, bottom: -70, invert: true, width: "2000" },
-            {id: "oblako1", src: "/assets/oblako_1.png", xRange: 10, yRange: 10, top: 0, left: 0  },
-            {id: "oblako2", src: "/assets/oblako_2.png", xRange: 10, yRange: 10, top: 0, left: 0  },
-            {id: "parashutist", src: "/assets/parashutist2.png", xRange: 10, yRange: 10, top: 0, left: 0  },
-            {id: "vosdushnii-shar", src: "/assets/vosdushnii_shar3.png", xRange: 10, yRange: 10, top: 0, left: 0  },
+            {id: "oblako1", src: "/assets/oblako2.png", xRange: 30, yRange: 30, top: 600, left: 200  },
+            {id: "parashutist", src: "/assets/parashutist4.png", xRange: 10, yRange: 10, top: 100, left: 100  },
+            {id: "vosdushnii-shar", src: "/assets/vosdushnii_shar4.png", xRange: 10, yRange: 10, top: 10, left: 1400  },
             {id: "oblako-text", src: "/assets/oblako-text.png", xRange: 30, yRange: 30, top: 350, left: 1230  }
         ];
         for (var i = 0; i < imgObjects.length; i++) {
@@ -57,7 +56,7 @@ $(document).ready(function () {
                         bottom: imgObject.bottom,
                         width: imgObject.width,
                         zIndex: imgObject.zIndex,
-                        position: imgObject.position
+                        position: "absolute"
                     }).addClass("plax-item")
                         .plaxify({"xRange": imgObject.xRange, "yRange": imgObject.yRange, invert: true})
                         .animate({
