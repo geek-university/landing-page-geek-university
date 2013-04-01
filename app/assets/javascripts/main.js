@@ -35,7 +35,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
         var imgObjects = [
-            {id: "background", src: "/assets/background2.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
+            {id: "background", src: "/assets/background.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
             {id: "footer", src: "/assets/gorod3.png", xRange: 160, yRange: 140, left: -80, bottom: -70, invert: true, width: "2000" },
             {id: "oblako1", src: "/assets/oblako2.png", xRange: 30, yRange: 30, top: 600, left: 200  },
             {id: "parashutist", src: "/assets/parashutist4.png", xRange: 10, yRange: 10, top: 100, left: 100  },
