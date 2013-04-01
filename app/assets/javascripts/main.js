@@ -34,7 +34,6 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    if (window.innerWidth >= 1400) {
         var imgObjects = [
             {id: "background", src: "/assets/background2.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
             {id: "footer", src: "/assets/gorod3.png", xRange: 160, yRange: 140, left: -80, bottom: -70, invert: true, width: "2000" },
@@ -83,7 +82,6 @@ $(document).ready(function () {
             img.src = imgObject.src;
         }
         $.plax.enable()
-    }
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
