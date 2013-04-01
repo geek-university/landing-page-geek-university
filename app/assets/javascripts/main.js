@@ -40,7 +40,7 @@ $(document).ready(function () {
             {id: "oblako1", src: "/assets/oblako2.png", xRange: 30, yRange: 30, top: 600, left: 200  },
             {id: "parashutist", src: "/assets/parashutist4.png", xRange: 10, yRange: 10, top: 100, left: 100  },
             {id: "vosdushnii-shar", src: "/assets/vosdushnii_shar4.png", xRange: 10, yRange: 10, top: 10, left: 1400  },
-            {id: "oblako-text", src: "/assets/oblako-text.png", xRange: 30, yRange: 30, top: 350, left: 1230  }
+            {id: "about-cloud", src: "/assets/oblako-text.png", xRange: 30, yRange: 30, top: 350, left: 1230  }
         ];
         for (var i = 0; i < imgObjects.length; i++) {
             var imgObject = imgObjects[i];
