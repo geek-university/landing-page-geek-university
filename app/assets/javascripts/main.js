@@ -2,7 +2,7 @@ $(function ($) {
     var $email = $("#subscription_email");
     var $submit = $("#subscribe-button");
 
-    $email.focus().bind('change focus blur keyup keypress click timer', function () {
+    $email.bind('change focus blur keyup keypress click timer', function () {
         $submit.attr("disabled", isCorrectEmail($email.val()));
     });
 
@@ -33,7 +33,7 @@ $(function ($) {
 $(function ($) {
     var imgObjects = [
 //            {id: "background", src: "/assets/background2.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
-        {id: "footer", src: "/assets/gorod3.png", xRange: 160, yRange: 140,invert: true},
+        {id: "footer", src: "/assets/gorod3.png", xRange: 160, yRange: 100, invert: true},
         {id: "oblako1", src: "/assets/oblako2.png", xRange: 30, yRange: 30, top: 600, left: 200  },
         {id: "parashutist", src: "/assets/parashutist4.png", xRange: 10, yRange: 10, top: 100, left: 100  },
         {id: "vosdushnii-shar", src: "/assets/vosdushnii_shar4.png", xRange: 10, yRange: 10, top: 10, left: 1400  },
@@ -62,8 +62,9 @@ $(function ($) {
         }(imgObject));
         img.src = imgObject.src;
     }
-    $('#background').plaxify()
+    $('#background').plaxify({invert: true})
     $.plax.enable()
+//    $(window).trigger('mouseend')
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
