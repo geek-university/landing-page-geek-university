@@ -2,13 +2,10 @@ $(function ($) {
     var $email = $("#subscription_email");
     var $submit = $("#subscribe-button");
 
+
     $email.focus().bind('change focus blur keyup keypress click timer', function () {
-        if (isCorrectEmail($email.val())) {
-            $submit.removeAttr("disabled");
-        } else {
-            $submit.attr("disabled", "disabled");
-        }
-    });
+        $submit.attr("disabled", isCorrectEmail($email.val()));
+    })
 
     setInterval(function () {
         $email.trigger('timer')
@@ -35,6 +32,7 @@ $(function ($) {
 
 $(function ($) {
     var imgObjects = [
+
         //{id: "background", src: "/assets/background_old.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
         {id: "footer", src: "/assets/city-new.png", xRange: 120, yRange: 140,invert: true},
         {id: "oblako1", src: "/assets/oblako2.png", xRange: 30, yRange: 30, top: 600, left: 200  },
@@ -63,24 +61,10 @@ $(function ($) {
                     }, getRandomInt(1000, 2000), "swing");
             }
         }(imgObject));
-                    /*                    image.animate({
-                     opacity: 1,
-                     width: img.width
-                     }, getRandomInt(1000, 2000), "swing", function () {
-                     var endless = function () {
-                     image.animate({
-                     width: getRandomInt(imgObject.width - 15, imgObject.width + 15),
-                     paddingTop: getRandomInt(-10, 10)
-                     }, getRandomInt(600, 1000), "swing", function () {
-                     endless()
-                     })
-                     };
-                     endless();
-                     }
-                     );*/
+
         img.src = imgObject.src;
     }
-    $('#background').plaxify()
+    $('#background').plaxify({invert: true})
     $.plax.enable()
 
     function getRandomInt(min, max) {
