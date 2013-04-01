@@ -47,5 +47,3 @@ gem 'thin'
 
 gem 'execjs'
 gem 'therubyracer'
-
-gem 'client_side_validations'

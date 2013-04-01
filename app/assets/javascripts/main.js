@@ -1,14 +1,3 @@
-$(function () {
-    $('#new_subscription')
-        .bind('ajax:success', function (e, data, status, xhr) {
-            $('#thank-you-div').html(data);
-            $('#subscription_email').val("");
-        })
-        .bind('ajax:error', function (e, xhr, status, error) {
-            console.log("error json: " + xhr.responseText);
-        });
-});
-
 $(document).ready(function () {
     var email = $("#subscription_email");
     var subscribeButton = $("#subscribe-button");
@@ -37,7 +26,7 @@ $(document).ready(function () {
                 email.val('');
                 setTimeout(function () {
                     $('#thank-you').fadeOut();
-                }, 4000);
+                }, 3000);
             });
         }
         return false;
@@ -75,21 +64,21 @@ $(document).ready(function () {
                             opacity: 1
                         }, getRandomInt(1000, 2000), "swing");
 
-/*                    image.animate({
-                            opacity: 1,
-                            width: img.width
-                        }, getRandomInt(1000, 2000), "swing", function () {
-                            var endless = function () {
-                                image.animate({
-                                    width: getRandomInt(imgObject.width - 15, imgObject.width + 15),
-                                    paddingTop: getRandomInt(-10, 10)
-                                }, getRandomInt(600, 1000), "swing", function () {
-                                    endless()
-                                })
-                            };
-                            endless();
-                        }
-                    );*/
+                    /*                    image.animate({
+                     opacity: 1,
+                     width: img.width
+                     }, getRandomInt(1000, 2000), "swing", function () {
+                     var endless = function () {
+                     image.animate({
+                     width: getRandomInt(imgObject.width - 15, imgObject.width + 15),
+                     paddingTop: getRandomInt(-10, 10)
+                     }, getRandomInt(600, 1000), "swing", function () {
+                     endless()
+                     })
+                     };
+                     endless();
+                     }
+                     );*/
                 }
             }(imgObject));
             img.src = imgObject.src;
