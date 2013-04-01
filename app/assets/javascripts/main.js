@@ -2,9 +2,10 @@ $(function ($) {
     var $email = $("#subscription_email");
     var $submit = $("#subscribe-button");
 
-    $email.bind('change focus blur keyup keypress click timer', function () {
+
+    $email.focus().bind('change focus blur keyup keypress click timer', function () {
         $submit.attr("disabled", isCorrectEmail($email.val()));
-    });
+    })
 
     setInterval(function () {
         $email.trigger('timer')
@@ -29,15 +30,15 @@ $(function ($) {
     });
 });
 
-
 $(function ($) {
     var imgObjects = [
-//            {id: "background", src: "/assets/background2.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
-        {id: "footer", src: "/assets/gorod3.png", xRange: 160, yRange: 100, invert: true},
+
+        //{id: "background", src: "/assets/background_old.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
+        {id: "footer", src: "/assets/gorod3.png", xRange: 160, yRange: 140,invert: true},
         {id: "oblako1", src: "/assets/oblako2.png", xRange: 30, yRange: 30, top: 600, left: 200  },
         {id: "parashutist", src: "/assets/parashutist4.png", xRange: 10, yRange: 10, top: 100, left: 100  },
         {id: "vosdushnii-shar", src: "/assets/vosdushnii_shar4.png", xRange: 10, yRange: 10, top: 10, left: 1400  },
-        {id: "oblako-text", src: "/assets/oblako-text.png", xRange: 30, yRange: 30, top: 350, left: 1230  }
+        {id: "about-cloud", src: "/assets/about-cloud.png", xRange: 30, yRange: 30, top: 350, left: 1230  }
     ];
     for (var i = 0; i < imgObjects.length; i++) {
         var imgObject = imgObjects[i];
@@ -60,11 +61,11 @@ $(function ($) {
                     }, getRandomInt(1000, 2000), "swing");
             }
         }(imgObject));
+
         img.src = imgObject.src;
     }
     $('#background').plaxify({invert: true})
     $.plax.enable()
-//    $(window).trigger('mouseend')
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);

@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+
+
+@font-face {
+    font-family: 'trixiecyr-plainregular';
+    src: url('trixiecyr-plain-webfont.eot');
+    src: url('trixiecyr-plain-webfont.eot?#iefix') format('embedded-opentype'),
+    url('trixiecyr-plain-webfont.woff') format('woff'),
+    url('trixiecyr-plain-webfont.ttf') format('truetype'),
+    url('trixiecyr-plain-webfont.svg#trixiecyr-plainregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

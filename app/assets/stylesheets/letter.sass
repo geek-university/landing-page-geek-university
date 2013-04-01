@@ -29,13 +29,18 @@
 
   #subscribe-button
     position: absolute
-    bottom: 30px
+    bottom: 40px
     z-index: 91
     background-color: transparent
-    background-image: url('/assets/button.png')
     font-size: 0
     text-indent: -9999px
     border: 0
-    width: 300px
-    height: 66px
+    width: 200px
+    height: 43px
     font-size: 20px
+    &:enabled
+      background-image: url('/assets/button-normal.png')
+    &:hover
+      background-image: url('/assets/button-hover.png')
+    &:disabled
+      background-image: url('/assets/button-disabled.png')
