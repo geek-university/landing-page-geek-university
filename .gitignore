@@ -16,3 +16,5 @@
 
 # Jetbrains ide's configuration files
 .idea
+
+.rvmrc
