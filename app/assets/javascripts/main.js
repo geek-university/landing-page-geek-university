@@ -64,7 +64,9 @@ $(function ($) {
 
         img.src = imgObject.src;
     }
-    $('#background').plaxify({invert: true})
+    //$('#background').plaxify({invert: true})
+    $('#left-eye').plaxify()
+    $('#right-eye').plaxify()
     $.plax.enable()
 
     function getRandomInt(min, max) {
