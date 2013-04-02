@@ -34,6 +34,7 @@ $(function ($) {
     var imgObjects = [
 
         //{id: "background", src: "/assets/background_old.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
+        {id: "city-far", src: "/assets/city-far.png", xRange: 40, yRange: 20, invert: true},
         {id: "footer", src: "/assets/city-new.png", xRange: 120, yRange: 140,invert: true},
         {id: "oblako1", src: "/assets/oblako2.png", xRange: 30, yRange: 30, top: 600, left: 200  },
         {id: "parashutist", src: "/assets/parashutist4.png", xRange: 10, yRange: 10, top: 100, left: 100  },
