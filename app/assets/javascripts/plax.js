@@ -213,7 +213,6 @@
             if(moveable()){
                 window.ondeviceorientation = function(e){plaxifier(e)}
             }
-
         },
 
         // Stop parallaxing
