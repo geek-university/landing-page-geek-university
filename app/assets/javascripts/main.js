@@ -32,7 +32,6 @@ $(function ($) {
 
 $(function ($) {
     var imgObjects = [
-        //{id: "background", src: "/assets/background_old.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
         {id: "city-far", src: "/assets/city-far2.png", xRange: 40, yRange: 20, invert: true},
         {id: "footer", src: "/assets/gorodwin-c.png", xRange: 120, yRange: 100,invert: true},
         {id: "oblako1", src: "/assets/oblako1-15-400.png", xRange: 30, yRange: 30, top: 475, left: 200  },
@@ -44,8 +43,10 @@ $(function ($) {
         var imgObject = imgObjects[i];
         var img = new Image();
         (function (imgObject) {
+            var id = "#" + imgObject.id;
+            $(id).hide();
             img.onload = function () {
-                var id = "#" + imgObject.id;
+                $(id).show();
                 $(id).prepend($(this)).css({
                     opacity: 0,
                     left: imgObject.left,
@@ -64,7 +65,7 @@ $(function ($) {
 
         img.src = imgObject.src;
     }
-    //$('#background').plaxify({invert: true})
+    $('#background').plaxify({invert: true})
     $('#left-eye').plaxify()
     $('#right-eye').plaxify()
     $.plax.enable()
