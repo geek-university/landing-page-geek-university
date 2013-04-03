@@ -32,14 +32,13 @@ $(function ($) {
 
 $(function ($) {
     var imgObjects = [
-
         //{id: "background", src: "/assets/background_old.jpg", xRange: 10, yRange: 10, top: -50, left: -50 },
-        {id: "city-far", src: "/assets/city-far.png", xRange: 40, yRange: 20, invert: true},
-        {id: "footer", src: "/assets/city-new.png", xRange: 120, yRange: 140,invert: true},
-        {id: "oblako1", src: "/assets/oblako2.png", xRange: 30, yRange: 30, top: 600, left: 200  },
-        {id: "parashutist", src: "/assets/parashutist4.png", xRange: 10, yRange: 10, top: 100, left: 100  },
-        {id: "vosdushnii-shar", src: "/assets/vosdushnii_shar4.png", xRange: 10, yRange: 10, top: 10, left: 1400  },
-        {id: "about-cloud", src: "/assets/about-cloud.png", xRange: 30, yRange: 30, top: 350, left: 1230  }
+        {id: "city-far", src: "/assets/city-far2.png", xRange: 40, yRange: 20, invert: true},
+        {id: "footer", src: "/assets/gorodwin-c.png", xRange: 120, yRange: 100,invert: true},
+        {id: "oblako1", src: "/assets/oblako1-15-400.png", xRange: 30, yRange: 30, top: 475, left: 200  },
+        {id: "parashutist", src: "/assets/parashutist-15-150.png", xRange: 10, yRange: 10, top: 80, left: 100  },
+        {id: "vosdushnii-shar", src: "/assets/vosdushnii_shar4.png", xRange: 10, yRange: 10, top: 10, left: 1500  },
+        {id: "about-cloud", src: "/assets/about-cloud3.png", xRange: 30, yRange: 30, top: 350, left: 1230  }
     ];
     for (var i = 0; i < imgObjects.length; i++) {
         var imgObject = imgObjects[i];
