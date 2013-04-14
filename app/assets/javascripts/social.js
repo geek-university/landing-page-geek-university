@@ -41,7 +41,7 @@ $(function () {
 
             var shareObj = {
                 title: "Geek University - открытый онлайн университет",
-                img: $("#logo").src,
+                img: $("#logo").attr("src"),
                 desc: "Geek University - открытый онлайн университет"
             };
 
