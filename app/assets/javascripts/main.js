@@ -59,6 +59,30 @@ $(function ($) {
         {
             "alt": "6",
             "src": "/assets/6.jpg"
+        },
+        {
+            "alt": "7",
+            "src": "/assets/7.jpg"
+        },
+        {
+            "alt": "8",
+            "src": "/assets/8.jpg"
+        },
+        {
+            "alt": "9",
+            "src": "/assets/9.jpg"
+        },
+        {
+            "alt": "10",
+            "src": "/assets/10.jpg"
+        },
+        {
+            "alt": "11",
+            "src": "/assets/11.jpg"
+        },
+        {
+            "alt": "12",
+            "src": "/assets/12.jpg"
         }
     ];
 
@@ -75,8 +99,6 @@ $(function ($) {
             (function (imgObject, index) {
                 imageToLoad.onload = function() {
                     var $newImageContainer = $("<li></li>").attr("id", "imageContainer" + index).css('background-image', 'url('+imgObject.src+')').addClass("inactive").fadeTo(0, 0);
-                    var $newImage = $(this).attr("id", "image" + index);
-//                    $newImageContainer.append($newImage);
                     $slider.append($newImageContainer);
 
                     if (slideshowNotStartedYet) {
