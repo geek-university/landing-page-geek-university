@@ -37,17 +37,17 @@ $(function () {
         var url = "http://geek-university.org";
 
         $socialWrap.on('click', 'a', function () {
-            var socialName = this.className, link, $count;
+            var socialName = this.className;
 
             var shareObj = {
-                title: "Geek University - открытый онлайн университет",
-                img: $("#logo").attr("src"),
-                desc: "Geek University - открытый онлайн университет"
+                title: "Geek University",
+                img: url + $("#logo").attr("src"),
+                desc: "открытый онлайн университет"
             };
 
             if (shareLinks[socialName]) {
                 // Get share link.
-                link = shareLinks[socialName](url, $.trim(shareObj.title), shareObj.img, $.trim(shareObj.desc));
+                var link = shareLinks[socialName](url, $.trim(shareObj.title), shareObj.img, $.trim(shareObj.desc));
                 // Fix VK link length.
                 if (socialName === 'vk' && link.length >= 3080) link = shareLinks.vk(url, $.trim(shareObj.title), shareObj.img);
 

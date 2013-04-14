@@ -40,10 +40,10 @@ html, body
   width: 100%
   height: 100%
   display: table
+  text-align: center
   #title_container
     display: table-cell
     width: 50%
-    text-align: center
     vertical-align: middle
     #logo
       width: 300px
@@ -87,17 +87,20 @@ html, body
           display: none
           background-color: red
       .share_wrapper
-        padding-top: 30px
+        padding: 30px
+        .share_text
+          color: white
+          font-size: 20px
         .share_links
           text-align: center
           padding: 0px
           margin: 0px
           a
             padding-right: 5px
-            background-color: white
+            background-color: black
             color: white
             text-decoration: none
-            background-image: image-url("icons2.png")
+            background-image: image-url("icons6.png")
             width: 64px
             height: 64px
             display: inline-block
@@ -169,7 +172,7 @@ html, body
 /* Large screens ----------- */
 @media only screen and (min-width : 1824px)
   #title_container
-    background-color: coral
+    background-color: #fcff01
 
 
 /* iPhone 4 ----------- */
