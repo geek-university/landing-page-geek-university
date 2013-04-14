@@ -74,9 +74,9 @@ $(function ($) {
             var imageToLoad = new Image();
             (function (imgObject, index) {
                 imageToLoad.onload = function() {
-                    var $newImageContainer = $("<li></li>").attr("id", "imageContainer" + index).addClass("inactive").fadeTo(0, 0);
+                    var $newImageContainer = $("<li></li>").attr("id", "imageContainer" + index).css('background-image', 'url('+imgObject.src+')').addClass("inactive").fadeTo(0, 0);
                     var $newImage = $(this).attr("id", "image" + index);
-                    $newImageContainer.append($newImage);
+//                    $newImageContainer.append($newImage);
                     $slider.append($newImageContainer);
 
                     if (slideshowNotStartedYet) {
