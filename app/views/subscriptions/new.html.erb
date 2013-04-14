@@ -1,37 +1,34 @@
-<div id="container">
-  <div id="background" data-xrange='10' data-yrange='10'></div>
-  <div id="city-far"></div>
-  <div id="footer"></div>
-  <div id="oblako1"></div>
-  <div id="oblako2"></div>
-  <div id="parashutist"></div>
-  <div id="vosdushnii-shar"></div>
-  <div id="about-cloud">
-    <div id="about-text">
-    &nbsp;&nbsp;Привет!<br>
-    Спасибо за интерес к Geek University.<br>
-    Совсем скоро мы откроем для Вас свои виртуальные двери, а пока оставьте свой<br> e-mail нашей совушке, мы будем держать вас в курсе дел.
-    </div>
-    <div id="team-signature">команда Geek U</div>
+<div id="wrapper">
+  <div id="title_container">
+    <div id="title">Geek University</div>
+    <div id="tagline">Открытый онлайн университет</div>
   </div>
+  <div id="info_container">
+    <div id="info_wrapper">
+        <div id="info">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consectetur magna nibh, ac feugiat nunc. Aliquam eget turpis felis, at aliquet felis. Vestibulum vel ante vitae tortor volutpat vulputate ac eget sem. Donec semper scelerisque dui, ut lobortis neque congue quis. Curabitur rhoncus tempor odio eget mattis. Aliquam id ligula quis quam placerat accumsan eu id elit. Etiam a felis tortor. Phasellus feugiat congue purus, et fermentum quam venenatis id. Vivamus lobortis ultrices ipsum vel viverra.
 
-  <div id="owl-with-letter" data-xrange='10' data-yrange='10'>
-    <div id="eyes-color"></div>
-    <img src="/assets/sovushka4.png" id="owl">
-    <img src="/assets/letter600clean.png" id="letter">
-    <img src="/assets/left-zrak.png" id="left-eye" data-xrange='5' data-yrange='5'>
-    <img src="/assets/right-zrak.png" id="right-eye" data-xrange='5' data-yrange='5'>
-
-    <div id="user_action">
-      <div id="recipient-address">в открытый онлайн университет<br><span id="geek-university">Geek University</span></div>
-      <div id="recipient-name">Мудрой совушке</div>
-      <form>
-          <input autofocus="" type="text" id="subscription_email" placeholder="введите ваш email">
-          <input type="submit" id="subscribe-button" disabled="disabled">
-      </form>
-      <div id="thank-you" style="display: none; position: absolute; left: 200px; top: 660px; font-size: 20px;">
-        Мудрая совушка довольна
-      </div>
+          Maecenas vitae libero ac magna consectetur volutpat. Duis quis risus vitae metus aliquet tincidunt quis nec turpis. Cras tristique bibendum turpis tristique venenatis. Pellentesque arcu arcu, vestibulum ac bibendum eget, accumsan quis ligula. Nunc egestas dui sed diam venenatis commodo. Integer neque purus, elementum sed dictum ornare, tristique eu enim. Mauris pretium luctus tortor, eu ultrices purus placerat et. Pellentesque quis arcu ante. Etiam a porta orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris placerat, lorem eu ullamcorper scelerisque, nunc felis scelerisque elit, id vestibulum augue lorem eget turpis. Nullam quis nisi odio, quis malesuada turpis.
+        </div>
+        <form id=subscription>
+          <input autofocus="" type="text" id="subscription_email" placeholder="Ваш e-mail">
+          <input type="submit" id="subscribe_button" value="Отправить">
+          <div id="thank_you">Спасибо</div>
+        </form>
+        <div id="share_wrapper">
+          <div id="share_text">Поделиться</div>
+          <ul id="share_links">
+            <li><a title="Опубликовать в facebook" class="facebook_text" target="_blank" href="http://www.facebook.com/sharer.php?u=http://geek-university.org - ">Facebook</a></li>
+            <li><a title="Опубликовать в twitter" class="twitter_text" target="_blank" href="http://twitter.com/intent/tweet?text=http://geek-university.org — все выдающиеся мозги в одном месте">Twitter</a></li>
+            <li><a title="Опубликовать в vkontakte" class="vkontakte_text" target="_blank" href="http://vkontakte.ru/share.php?url=http://geek-university.org">VK</a></li>
+            <li><a href="https://plus.google.com/share?url={URL}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="https://www.gstatic.com/images/icons/gplus-64.png" alt="Share on Google+"/></a></li>
+          </ul>
+        </div>
     </div>
+
+    <ul id="slider">
+      <li><img src="/assets/dvoika.jpg"></li>
+    </ul>
+    <div id="overlay"></div>
   </div>
 </div>
