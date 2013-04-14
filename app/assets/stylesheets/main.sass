@@ -26,7 +26,6 @@ html, body
     height: 100%
     background-repeat: no-repeat
     background-size: cover
-
     &.inactive
       z-index: -80
     &.previousActive
@@ -46,6 +45,8 @@ html, body
     width: 50%
     text-align: center
     vertical-align: middle
+    #logo
+      width: 300px
     #title
       font-size: 100px
     #tagline
@@ -53,7 +54,6 @@ html, body
   #info_container
     display: table-cell
     width: 50%
-    text-align: center
     vertical-align: middle
     position: relative
     #info_wrapper
@@ -69,6 +69,7 @@ html, body
           padding: 10px
           font-size: 16px
           margin: 0
+          width: 20em
         #subscribe_button
           border: none
           background-color: white
@@ -85,22 +86,33 @@ html, body
         #incorrect_email
           display: none
           background-color: red
-      #share_wrapper
+      .share_wrapper
         padding-top: 30px
-        #share_links
+        .share_links
           text-align: center
-          list-style-type: none
           padding: 0px
           margin: 0px
-          li
-            display: inline
+          a
             padding-right: 5px
-            a
-              background-color: black
-              color: white
-              text-decoration: none
-              &:hover
-                background-position: 0px -40px
+            background-color: white
+            color: white
+            text-decoration: none
+            background-image: image-url("icons2.png")
+            width: 64px
+            height: 64px
+            display: inline-block
+            background-repeat: no-repeat
+            &:hover
+              background-color: gray
+            &.google
+              background-position: 0 0
+            &.fb
+              background-position-x: -79px
+            &.vk
+              background-position-x: -159px
+            &.twitter
+              background-position-x: -238px
+
     #overlay
       z-index: -50
       top: 0

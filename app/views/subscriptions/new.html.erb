@@ -1,5 +1,6 @@
 <div id="wrapper">
   <div id="title_container">
+    <img id="logo" src="/assets/logo2medium.png" alt="geek university"/>
     <h1 id="title">Geek University</h1>
     <h2 id="tagline">Открытый онлайн университет</h2>
   </div>
@@ -12,18 +13,18 @@
         </div>
         <form id=subscription>
           <input autofocus="" type="text" id="subscription_email" placeholder="Ваш email">
-          <input type="button" id="subscribe_button" value="Отправить">
+          <input type="submit" id="subscribe_button" value="Отправить">
           <div id="thank_you">Спасибо</div>
           <div id="incorrect_email">Email введён неверно</div>
         </form>
-        <div id="share_wrapper">
-          <div id="share_text">Поделиться</div>
-          <ul id="share_links">
-            <li><a title="Опубликовать в facebook" class="facebook_text" target="_blank" href="http://www.facebook.com/sharer.php?u=http://geek-university.org - ">Facebook</a></li>
-            <li><a title="Опубликовать в twitter" class="twitter_text" target="_blank" href="http://twitter.com/intent/tweet?text=http://geek-university.org — все выдающиеся мозги в одном месте">Twitter</a></li>
-            <li><a title="Опубликовать в vkontakte" class="vkontakte_text" target="_blank" href="http://vkontakte.ru/share.php?url=http://geek-university.org">VK</a></li>
-            <li><a href="https://plus.google.com/share?url={URL}" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="https://www.gstatic.com/images/icons/gplus-64.png" alt="Share on Google+"/></a></li>
-          </ul>
+        <div class="share_wrapper">
+          <div class="share_text">Поделиться</div>
+          <div class="share_links">
+            <a title="Опубликовать в vkontakte" class="vk" href="http://vkontakte.ru/share.php?url=http://geek-university.org" target="_blank"></a>
+            <a title="Опубликовать в facebook" class="fb" href="http://www.facebook.com/sharer.php?u=http://geek-university.org" target="_blank"></a>
+            <a title="Опубликовать в twitter" class="twitter" href="http://twitter.com/share?text=Открытый онлайн университет Geek University&url=http://geek-university.org" target="_blank"></a>
+            <a title="Опубликовать в Google+" class="google" href="https://plus.google.com/share?url=http://geek-university.org" target="_blank"></a>
+          </div>
         </div>
     </div>
 
