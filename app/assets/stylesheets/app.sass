@@ -1,3 +1,8 @@
+$main-color: #fcff01
+$title-color: #000000
+$tagline-color: #999999
+$text-color: #ffffff
+
 html, body
   height: 100%
   width: 100%
@@ -45,12 +50,15 @@ html, body
     display: table-cell
     width: 50%
     vertical-align: middle
+    background-color: $main-color
     #logo
       width: 300px
     #title
       font-size: 100px
+      color: $title-color
     #tagline
       font-size: 60px
+      color: $tagline-color
   #info_container
     display: table-cell
     width: 50%
@@ -60,7 +68,7 @@ html, body
       padding: 50px
       #info
         //background-color: black
-        color: white
+        color: $text-color
       #subscription
         padding-top: 30px
         #subscription_email
@@ -100,7 +108,7 @@ html, body
             background-color: black
             color: white
             text-decoration: none
-            background-image: image-url("icons6.png")
+            background-image: image-url("icons7.png")
             width: 64px
             height: 64px
             display: inline-block
@@ -121,61 +129,53 @@ html, body
       top: 0
       width: 100%
       height: 100%
-      position: fixed
+      position: absolute
       overflow: hidden
       background-repeat: repeat
+      background-size: cover
       background-position: 0px 0px
-      background: image-url("bgd.png")
+      background: image-url("bgd2.png")
 
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
   #title_container
-    background-color: red
 
-/* Smartphones (landscape) ----------- */
+    /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px)
   #title_container
-    background-color: yellow
 
 
-/* Smartphones (portrait) ----------- */
+    /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px)
   #title_container
-    background-color: cadetblue
 
 
-/* iPads (portrait and landscape) ----------- */
+    /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
   #title_container
-    background-color: aqua
 
 
-/* iPads (landscape) ----------- */
+    /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
   #title_container
-    background-color: gray
 
 
-/* iPads (portrait) ----------- */
+    /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
   #title_container
-    background-color: magenta
 
 
-/* Desktops and laptops ----------- */
+    /* Desktops and laptops ----------- */
 @media only screen and (min-width : 1224px)
   #title_container
-    background-color: blue
 
 
-/* Large screens ----------- */
+    /* Large screens ----------- */
 @media only screen and (min-width : 1824px)
   #title_container
-    background-color: #fcff01
 
 
-/* iPhone 4 ----------- */
+    /* iPhone 4 ----------- */
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5)
   #title_container
-    background-color: green

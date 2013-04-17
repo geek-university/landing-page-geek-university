@@ -2,18 +2,18 @@ $(function ($) {
     var slideshowSpeed = 3000;
 
     var images = [
-        "/assets/0.jpg",
-        "/assets/1.jpg",
-        "/assets/2.jpg",
-        "/assets/3.jpg",
-        "/assets/4.jpg",
-        "/assets/5.jpg",
-        "/assets/6.jpg",
-        "/assets/7.jpg",
-        "/assets/8.jpg",
-        "/assets/9.jpg",
-        "/assets/11.jpg",
-        "/assets/12.jpg"
+        "/assets/0c.jpg",
+        "/assets/1c.jpg",
+        "/assets/2c.jpg",
+        "/assets/3c.jpg",
+        "/assets/4c.jpg",
+        "/assets/5c.jpg",
+        "/assets/6c.jpg",
+        "/assets/7c.jpg",
+        "/assets/8c.jpg",
+        "/assets/9c.jpg",
+        "/assets/10c.jpg",
+        "/assets/11c.jpg"
     ];
 
     var $slider = $("#slider");
