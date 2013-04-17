@@ -1,4 +1,4 @@
-$main-color: #fcff01
+$main-color: #ffb93f
 $title-color: #000000
 $tagline-color: #999999
 $text-color: #ffffff
@@ -70,6 +70,7 @@ html, body
         //background-color: black
         color: $text-color
       #subscription
+        margin: 0 auto
         padding-top: 30px
         #subscription_email
           border: none
@@ -95,7 +96,7 @@ html, body
           display: none
           background-color: red
       .share_wrapper
-        padding: 30px
+        padding: 60px
         .share_text
           color: white
           font-size: 20px
@@ -136,46 +137,18 @@ html, body
       background-position: 0px 0px
       background: image-url("bgd2.png")
 
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
-  #title_container
-
-    /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px)
-  #title_container
-
-
-    /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px)
-  #title_container
-
-
-    /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
-  #title_container
-
-
-    /* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
-  #title_container
-
-
-    /* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
-  #title_container
-
-
-    /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px)
-  #title_container
-
-
-    /* Large screens ----------- */
-@media only screen and (min-width : 1824px)
-  #title_container
-
-
-    /* iPhone 4 ----------- */
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5)
-  #title_container
+@media only screen and (orientation : portrait)
+  #wrapper
+    display: block
+    #title_container
+      display: block
+      width: 100%
+      #title
+        margin-top: 0px
+      #tagline
+        margin-bottom: 0px
+        padding-bottom: 20px
+    #info_container
+      display: block
+      width: 100%
+      min-height: 800px
