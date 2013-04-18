@@ -17,9 +17,9 @@ $(function () {
             if (text) link += '&p[summary]=' + encodeURIComponent(text);
             return link;
         },
-        twitter: function (url, title) {
+        twitter: function (url, title, img, text) {
             var link = 'http://twitter.com/share?';
-            link += 'text=' + encodeURIComponent(title);
+            link += 'text=' + encodeURIComponent(title + " - " + text);
             link += '&url=' + encodeURIComponent(url);
             link += '&counturl=' + encodeURIComponent(url);
             return link;
