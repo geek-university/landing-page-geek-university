@@ -16,10 +16,12 @@ $(function ($) {
             $.post('/subscriptions', {"subscription[email]": $email.val()}, function (response) {
                 $message.text("На указанную почту было отправлено письмо");
                 $message.css("backgroundColor", "green");
-                $message.fadeIn();
+                $message.css("visibility", "visible").animate({opacity : 1});
                 $email.val('');
                 setTimeout(function () {
-                    $message.fadeOut();
+                    $message.animate({opacity : 0}, function() {
+                        $message.css("visibility", "hidden");
+                    });
                     $submit.removeAttr('disabled');
                 }, 3000);
             });
@@ -29,7 +31,7 @@ $(function ($) {
             $message.css("visibility", "visible").animate({opacity : 1});
             setTimeout(function () {
                 $message.animate({opacity : 0}, function() {
-                    this.css("visibility", "hidden");
+                    $message.css("visibility", "hidden");
                 });
                 $submit.removeAttr('disabled');
             }, 3000);
