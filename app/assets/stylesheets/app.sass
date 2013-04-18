@@ -31,6 +31,9 @@ html, body
     height: 100%
     background-position: center center
     background-repeat: no-repeat
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
     background-size: cover
     &.inactive
       z-index: -80
@@ -95,18 +98,15 @@ html, body
           &:hover
             background-color: black
             color: white
-        #thank_you
+          &:disabled
+            background-color: #cccccc
+            color:  black
+        #message
+          visibility: hidden
           padding: 10px
           color: #ffffff
           font-weight: bold
-          display: none
           background-color: green
-        #incorrect_email
-          padding: 10px
-          color: #ffffff
-          font-weight: bold
-          display: none
-          background-color: red
       .share_wrapper
         margin: 60px 0
         .share_links
@@ -141,7 +141,11 @@ html, body
       height: 100%
       position: absolute
       overflow: hidden
+      background-attachment: fixed
       background-repeat: repeat
+      -webkit-background-size: cover
+      -moz-background-size: cover
+      -o-background-size: cover
       background-size: cover
       background-position: 0px 0px
       background: image-url("bgd2.png")

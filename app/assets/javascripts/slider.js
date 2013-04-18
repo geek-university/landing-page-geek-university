@@ -10,7 +10,6 @@ $(function ($) {
         "/assets/5c.jpg",
         "/assets/6c.jpg",
         "/assets/7c.jpg",
-        "/assets/9c.jpg",
         "/assets/10c.jpg",
         "/assets/11c.jpg"
     ];
