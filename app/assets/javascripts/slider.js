@@ -1,5 +1,5 @@
 $(function ($) {
-    var slideshowSpeed = 3000;
+    var slideshowSpeed = 6000;
 
     var images = [
         "/assets/0c.jpg",

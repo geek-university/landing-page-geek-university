@@ -21,8 +21,8 @@ $(function ($) {
                 setTimeout(function () {
                     $message.transition({opacity : 0}, function() {
                         $message.css("visibility", "hidden");
+                        $submit.removeAttr('disabled');
                     });
-                    $submit.removeAttr('disabled');
                 }, 3000);
             });
         } else {
@@ -32,8 +32,8 @@ $(function ($) {
             setTimeout(function () {
                 $message.transition({opacity : 0}, function() {
                     $message.css("visibility", "hidden");
+                    $submit.removeAttr('disabled');
                 });
-                $submit.removeAttr('disabled');
             }, 3000);
         }
         return false;
