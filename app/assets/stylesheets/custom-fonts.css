@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'nokia_sans_s60regular';
+    src: url('1sansroundednewsymb-webfont.eot');
+    src: url('1sansroundednewsymb-webfont.eot?#iefix') format('embedded-opentype'),
+    url('1sansroundednewsymb-webfont.woff') format('woff'),
+    url('1sansroundednewsymb-webfont.ttf') format('truetype'),
+    url('1sansroundednewsymb-webfont.svg#nokia_sans_s60regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bicubikregular';
+    src: url('bicubik_central_europe-webfont.eot');
+    src: url('bicubik_central_europe-webfont.eot?#iefix') format('embedded-opentype'),
+    url('bicubik_central_europe-webfont.woff') format('woff'),
+    url('bicubik_central_europe-webfont.ttf') format('truetype'),
+    url('bicubik_central_europe-webfont.svg#bicubikregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'furoreregular';
+    src: url('furore-webfont.eot');
+    src: url('furore-webfont.eot?#iefix') format('embedded-opentype'),
+    url('furore-webfont.woff') format('woff'),
+    url('furore-webfont.ttf') format('truetype'),
+    url('furore-webfont.svg#furoreregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'molotregular';
+    src: url('molot-webfont.eot');
+    src: url('molot-webfont.eot?#iefix') format('embedded-opentype'),
+    url('molot-webfont.woff') format('woff'),
+    url('molot-webfont.ttf') format('truetype'),
+    url('molot-webfont.svg#molotregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'movavi_grotesqueblack';
+    src: url('movavi_grotesque_black-webfont.eot');
+    src: url('movavi_grotesque_black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('movavi_grotesque_black-webfont.woff') format('woff'),
+    url('movavi_grotesque_black-webfont.ttf') format('truetype'),
+    url('movavi_grotesque_black-webfont.svg#movavi_grotesqueblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'movavi_grotesqueblack_italic';
+    src: url('movavi_grotesque_black_italic-webfont.eot');
+    src: url('movavi_grotesque_black_italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('movavi_grotesque_black_italic-webfont.woff') format('woff'),
+    url('movavi_grotesque_black_italic-webfont.ttf') format('truetype'),
+    url('movavi_grotesque_black_italic-webfont.svg#movavi_grotesqueblack_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

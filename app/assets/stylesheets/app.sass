@@ -2,18 +2,19 @@ $main-color: #ffb93f
 $title-color: #000000
 $tagline-color: #333333
 $text-color: #ffffff
+$title-font-family: 'furoreregular'
+$text-font-family: 'nokia_sans_s60regular'
 
 html, body
   height: 100%
   width: 100%
   margin: 0
   padding: 0
-  font-family: Trebuchet MS, Trebuchet MS, sans-serif
 
 *
+  -webkit-box-sizing: border-box
   box-sizing: border-box
   -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
 
 #slider
   background-color: black
@@ -49,6 +50,7 @@ html, body
   height: 100%
   display: table
   #title_container
+    font-family: $title-font-family
     display: table-cell
     width: 50%
     vertical-align: middle
@@ -60,11 +62,14 @@ html, body
       font-size: 6em
       color: $title-color
       margin: 30px 0 30px 0
+      font-weight: normal
     #tagline
       font-size: 3em
       color: $tagline-color
       margin: 15px 0 15px 0
+      font-weight: normal
   #info_container
+    font-family: $text-font-family
     display: table-cell
     width: 50%
     vertical-align: middle
@@ -81,6 +86,7 @@ html, body
         width: 450px
         padding-top: 30px
         #subscription_email
+          font-family: $text-font-family
           border: none
           outline: none
           padding: 10px
@@ -88,6 +94,7 @@ html, body
           margin: 0
           width: 325px
         #subscribe_button
+          font-family: $text-font-family
           border: none
           outline: none
           width: 120px

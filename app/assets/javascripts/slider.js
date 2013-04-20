@@ -1,17 +1,17 @@
 $(function ($) {
-    var slideshowSpeed = 6000;
+    var slideshowSpeed = 4500;
 
     var images = [
-        "/assets/0c.jpg",
-        "/assets/1c.jpg",
-        "/assets/2c.jpg",
-        "/assets/3c.jpg",
-        "/assets/4c.jpg",
-        "/assets/5c.jpg",
-        "/assets/6c.jpg",
-        "/assets/7c.jpg",
-        "/assets/10c.jpg",
-        "/assets/11c.jpg"
+        {src: "/assets/0c.jpg", width: 1000, height: 1000},
+        {src: "/assets/1c.jpg", width: 628, height: 628},
+        {src: "/assets/2c.jpg", width: 1000, height: 1000},
+        {src: "/assets/3c.jpg", width: 937, height: 937},
+        {src: "/assets/4c.jpg", width: 1000, height: 1000},
+        {src: "/assets/5c.jpg", width: 762, height: 762},
+        {src: "/assets/6c.jpg", width: 911, height: 911},
+        {src: "/assets/7c.jpg", width: 1000, height: 1000},
+        {src: "/assets/8c.jpg", width: 463, height: 463},
+        {src: "/assets/9c.jpg", width: 763, height: 763},
     ];
 
     var $slider = $("#slider");
@@ -25,7 +25,7 @@ $(function ($) {
             var imageToLoad = new Image();
             (function (imgObject, index) {
                 imageToLoad.onload = function () {
-                    var $newImage = $("<img/>").attr("id", "image" + index).attr("src", imgObject).addClass("inactive").transition({opacity: 0}, 0);
+                    var $newImage = $("<img/>").attr("width", imgObject.width).attr("height", imgObject.height).attr("src", imgObject.src).addClass("inactive").transition({opacity: 0}, 0);
                     $slider.append($newImage);
 
                     if (slideshowNotStartedYet) {
@@ -34,7 +34,7 @@ $(function ($) {
                     }
                 }
             }(imageObject, i));
-            imageToLoad.src = imageObject;
+            imageToLoad.src = imageObject.src;
         }
     }
 
