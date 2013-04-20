@@ -25,7 +25,7 @@ $(function ($) {
             var imageToLoad = new Image();
             (function (imgObject, index) {
                 imageToLoad.onload = function () {
-                    var $newImage = $("<img/>").attr("id", "image" + index).attr("src", imgObject).addClass("inactive").fadeTo(0, 0);
+                    var $newImage = $("<img/>").attr("id", "image" + index).attr("src", imgObject).addClass("inactive").transition({opacity: 0}, 0);
                     $slider.append($newImage);
 
                     if (slideshowNotStartedYet) {
@@ -49,8 +49,8 @@ $(function ($) {
 
         var newImage = $(loadedImages[currentImageIndex]);
         newImage.removeClass("inactive").addClass("active");
-        newImage.fadeTo(0, 0);
-        newImage.fadeTo(1000, 1);
+        newImage.transition({opacity: 0}, 0);
+        newImage.transition({opacity: 1});
 
         currentImageIndex++;
 
