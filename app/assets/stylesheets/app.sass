@@ -16,6 +16,14 @@ html, body
   box-sizing: border-box
   -moz-box-sizing: border-box
 
+.clear-fix:after
+  height: 0
+  clear: both
+  content: " "
+  font-size: 0
+  display: block
+  visibility: hidden
+
 #slider
   background-color: black
   z-index: -100
@@ -24,8 +32,8 @@ html, body
   left: 25%
   width: 100%
   height: 200%
-  padding: 0px
-  margin: 0px
+  padding: 0
+  margin: 0
   overflow: hidden
   img
     position: absolute
@@ -56,17 +64,15 @@ html, body
     vertical-align: middle
     background-color: $main-color
     text-align: center
-    #logo
-      width: 300px
     #title
       font-size: 6em
       color: $title-color
-      margin: 30px 0 30px 0
+      margin: 0.5em 0 0.5em 0
       font-weight: normal
     #tagline
       font-size: 3em
       color: $tagline-color
-      margin: 15px 0 15px 0
+      margin: 0.5em 0 0.5em 0
       font-weight: normal
   #info_container
     font-family: $text-font-family
@@ -75,56 +81,61 @@ html, body
     vertical-align: middle
     position: relative
     #info_wrapper
-      padding: 50px
+      padding: 3em
       #info
+        width: 20em
+        font-size: 1.5em
         margin: 0 auto
-        width: 450px
         //background-color: black
         color: $text-color
       #subscription
         margin: 0 auto
-        width: 450px
-        padding-top: 30px
+        width: 30em
+        padding-top: 2em
         #subscription_email
           font-family: $text-font-family
           border: none
           outline: none
-          padding: 10px
-          font-size: 16px
+          padding: 0.5em
+          font-size: 1em
           margin: 0
-          width: 325px
+          float: left
+          width: 22.75em
+          margin-right: 0.25em
         #subscribe_button
           font-family: $text-font-family
           border: none
           outline: none
-          width: 120px
+          width: 7em
           background-color: white
           color: black
-          padding: 10px
-          font-size: 16px
+          padding: 0.5em
+          font-size: 1em
+          float: left
           margin: 0
-          margin-bottom: 10px
           &:hover
             background-color: black
             color: white
           &:disabled
-            background-color: #cccccc
-            color:  black
+            background-color: #F9F8F8
+            color: #ADA9A5
         #message
+          margin-top: 1em
           visibility: hidden
-          padding: 10px
+          padding: 0.5em
           color: #ffffff
           font-weight: bold
           background-color: green
-          height: 39px
+          font-size: 1em
+          height: 2.5em
       .share_wrapper
-        margin: 30px 0
+        margin: 1em 0
         .share_links
           text-align: center
-          padding: 0px
-          margin: 0px
+          padding: 0
+          margin: 0
           a
-            padding-right: 5px
+            padding-right: 0.25em
             background-color: #000000
             color: white
             text-decoration: none
@@ -153,7 +164,7 @@ html, body
       overflow: hidden
       background-attachment: fixed
       background-repeat: repeat
-      background-position: 0px 0px
+      background-position: 0 0
       background: image-url("bgd2.png")
 
 @media only screen and (orientation : portrait)
@@ -162,12 +173,12 @@ html, body
     #title_container
       display: block
       width: 100%
-      height: 600px
+      height: 35em
       #title
-        margin-top: 0px
+        margin-top: 0
       #tagline
-        margin-bottom: 0px
-        padding-bottom: 20px
+        margin-bottom: 0
+        padding-bottom: 1em
     #info_container
       overflow: hidden
       display: block
