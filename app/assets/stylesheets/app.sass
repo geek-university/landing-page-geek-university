@@ -98,6 +98,7 @@ img
     width: 50%
     vertical-align: middle
     position: relative
+    padding: 6em 0
     #info_wrapper
       padding: 3em
       margin: 0 auto
@@ -201,27 +202,62 @@ img
       background-position: 0px 0px
       background: url('bgd-000000-040.png')
 
-@media only screen and (orientation : portrait), only screen and (max-width : 767px)
+@media only screen and (orientation : portrait), only screen and (max-width : 874px)
   #wrapper
     display: block
     #title_container
       display: block
       width: 100%
-      height: 35em
+      padding: 2em
+      height: 22.75em
+      .title_wrapper
+        position: relative
+        #title
+          padding: 0.25em 0 0 3.125em
+          margin: 0 auto
+        #logo
+          position: absolute
+          top: 0
+          left: 0
+        #tagline
+          margin: 0 auto
+          padding-left: 6.25em
     #info_container
       overflow: hidden
       display: block
       width: 100%
-      height: 100%
+      font-size: 1.5em
   #slider
     position: absolute
     left: -50%
     width: 200%
     overflow: hidden
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+@media only screen and (min-width : 0px) and (max-width : 399px)
+  #logo
+    display: none
   body
-    font-size: 0.625em
+    font-size: 0.25em
+  #title_container
+    height: auto
+    h1#title
+      padding: 0
+    #tagline
+      padding: 0
+
+@media only screen and (min-width : 400px)
+  body
+    font-size: 0.375em
+  #logo
+    display: inline-block
+
+@media only screen and (min-width : 450px)
+  body
+    font-size: 0.4375em
+
+@media only screen and (min-width : 550px)
+  body
+    font-size: 0.5em
 
 @media only screen and (min-width : 768px)
   body
