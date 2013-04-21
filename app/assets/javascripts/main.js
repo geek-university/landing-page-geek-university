@@ -16,10 +16,10 @@ $(function ($) {
             $.post('/subscriptions', {"subscription[email]": $email.val()}, function (response) {
                 $message.text("На указанную почту было отправлено письмо");
                 $message.css("backgroundColor", "green");
-                $message.css("visibility", "visible").transition({opacity : 1});
+                $message.css("visibility", "visible").transition({opacity : 1}, 200);
                 $email.val('');
                 setTimeout(function () {
-                    $message.transition({opacity : 0}, function() {
+                    $message.transition({opacity : 0}, 200, function() {
                         $message.css("visibility", "hidden");
                         $submit.removeAttr('disabled');
                     });
@@ -28,9 +28,9 @@ $(function ($) {
         } else {
             $message.text("Email введён неверно");
             $message.css("backgroundColor", "red");
-            $message.css("visibility", "visible").transition({opacity : 1});
+            $message.css("visibility", "visible").transition({opacity : 1}, 200);
             setTimeout(function () {
-                $message.transition({opacity : 0}, function() {
+                $message.transition({opacity : 0}, 200, function() {
                     $message.css("visibility", "hidden");
                     $submit.removeAttr('disabled');
                 });

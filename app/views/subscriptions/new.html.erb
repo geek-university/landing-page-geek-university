@@ -1,7 +1,7 @@
 <div id="wrapper">
   <div id="title_container">
     <h1 id="title">Geek University</h1>
-    <img id="logo" src="/assets/owl3.png" alt="geek university" width="300" height="300"/>
+    <img id="logo" src="/assets/owl.png" alt="geek university" width="300" height="300"/>
     <h2 id="tagline">Открытый онлайн университет</h2>
   </div>
   <div id="info_container">
@@ -11,14 +11,17 @@
 
         </div>
         <form id="subscription">
-          <div id="message"></div>
+          <div class="subscription_text_wrapper">
+            <div class="subscription_text">Оповестить меня об открытии университета</div>
+            <div id="message" class="subscription_text"></div>
+          </div>
           <div class="clear-fix">
               <input autofocus="" type="text" id="subscription_email" placeholder="Ваш email">
               <input type="submit" id="subscribe_button" value="Отправить">
           </div>
         </form>
         <div class="share_wrapper">
-          <div class="share_text">Поделитесь ссылкой</div>
+          <div class="share_text">Рассказать друзьям</div>
           <div class="share_links">
             <a title="Опубликовать новость в vkontakte" class="vk" href="http://vkontakte.ru/share.php?url=http://geek-university.org" target="_blank"></a>
             <a title="Опубликовать новость в facebook" class="fb" href="http://www.facebook.com/sharer.php?u=http://geek-university.org" target="_blank"></a>

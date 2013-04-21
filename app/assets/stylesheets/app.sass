@@ -1,5 +1,5 @@
 $primary-color-raw: 'ffb93f'
-$secondary-color-raw: '000000' // #272A63 //#3562a9        1a1c54
+$secondary-color-raw: '1a1c54' // #272A63 //#3562a9        1a1c54
 $primary-color: unquote('#' + '#{$primary-color-raw}')
 $secondary-color: unquote('#' + '#{$secondary-color-raw}')
 $primary-background-opacity: '080'
@@ -8,11 +8,13 @@ $primary-background-transparent: url('bgd-#{$primary-color-raw}-#{$primary-backg
 $secondary-background-transparent: url('bgd-#{$secondary-color-raw}-#{$secondary-background-opacity}.png')
 
 $tagline-color: #333333
-$text-color: ivory
-$title-font-family: 'molotregular'
+$text-color: #FFFFF0
+$title-font-family: 'nokia_sans_s60regular'
 $text-font-family: 'nokia_sans_s60regular'
 $margin-between-sections: 2em
 $section-padding: 1em
+$text-size: 1.25em
+$text-padding: 0.5em
 
 html, body
   height: 100%
@@ -76,17 +78,19 @@ img
     vertical-align: middle
     background-color: $primary-color
     text-align: center
+    padding: 1em 0 1em 0
     #title
       font-size: 6em
       color: $secondary-color
-      margin: 0.5em 0 0.5em 0
+      margin: 0
       font-weight: normal
     #logo
-      width: 300px
+      width: 18.75em
+      height: 18.75em
     #tagline
       font-size: 3em
       color: $tagline-color
-      margin: 0.5em 0 0.5em 0
+      margin: 0
       font-weight: normal
   #info_container
     font-family: $text-font-family
@@ -96,70 +100,78 @@ img
     position: relative
     #info_wrapper
       padding: 3em
+      margin: 0 auto
+      width: 40em
       #info
         background: $secondary-background-transparent
         padding: $section-padding
-        width: 20em
-        font-size: 1.5em
+        font-size: $text-size
         margin: 0 auto
         //background-color: black
         color: $text-color
       #subscription
-        margin: $margin-between-sections auto 0 auto
+        margin-top: $margin-between-sections
         background: $primary-background-transparent
-        width: 30em
         padding: $section-padding
+        .subscription_text_wrapper
+          position: relative
+          margin-bottom: 1em
+          color: $text-color
+          height: 2*$text-size + $text-padding
+          .subscription_text
+            font-size: $text-size
+            padding: $text-padding
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+          #message
+            z-index: 10
+            visibility: hidden
         #subscription_email
+          height: 2.75em
           font-family: $text-font-family
+          background-color: $text-color
           border: none
           outline: none
-          padding: 0.5em
-          font-size: 1em
+          padding: $text-padding
+          font-size: $text-size
           margin: 0
           float: left
-          width: 20.75em
+          width: 18.25em
           margin-right: 0.25em
         #subscribe_button
+          height: 2.75em
           font-family: $text-font-family
           border: none
           outline: none
           width: 7em
-          background-color: white
+          background-color: $text-color
           color: black
-          padding: 0.5em
-          font-size: 1em
+          padding: $text-padding
+          font-size: $text-size
           float: left
           margin: 0
           &:hover
             background-color: black
-            color: white
+            color: $text-color
           &:disabled
             background-color: #F9F8F8
             color: #ADA9A5
-        #message
-          margin-bottom: 1em
-          visibility: hidden
-          padding: 0.5em
-          color: #ffffff
-          font-weight: bold
-          background-color: green
-          font-size: 1em
-          height: 2.5em
       .share_wrapper
-        margin: $margin-between-sections auto 0 auto
-        width: 30em
+        margin-top: $margin-between-sections
         padding: $section-padding
         text-align: center
         background: $secondary-background-transparent
         .share_text
           color: $text-color
-          font-weight: bold
-          font-size: 1.5em
+          font-size: $text-size
+          padding-bottom: $text-padding
         .share_links
           padding: 0
           margin: 0
           a
-            padding-right: 0.25em
             background-color: $secondary-color
             text-decoration: none
             background-image: image-url("icons8.png")
@@ -168,7 +180,7 @@ img
             display: inline-block
             background-repeat: no-repeat
             &:hover
-              background-color: #ffffff
+              background-color: $text-color
             &.google
               background-position: 0 0
             &.fb
@@ -187,20 +199,15 @@ img
       background-attachment: fixed
       background-repeat: repeat
       background-position: 0px 0px
-      background: url("bgd.png")
+      background: url('bgd-000000-040.png')
 
-@media only screen and (orientation : portrait)
+@media only screen and (orientation : portrait), only screen and (max-width : 767px)
   #wrapper
     display: block
     #title_container
       display: block
       width: 100%
       height: 35em
-      #title
-        margin-top: 0
-      #tagline
-        margin-bottom: 0
-        padding-bottom: 1em
     #info_container
       overflow: hidden
       display: block
@@ -211,3 +218,35 @@ img
     left: -50%
     width: 200%
     overflow: hidden
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+  body
+    font-size: 0.625em
+
+@media only screen and (min-width : 768px)
+  body
+    font-size: 0.5625em
+
+@media only screen and (min-width : 875px)
+  body
+    font-size: 0.625em
+
+@media only screen and (min-width : 975px)
+  body
+    font-size: 0.6875em
+
+@media only screen and (min-width : 1100px)
+  body
+    font-size: 0.75em
+
+@media only screen and (min-width : 1300px)
+  body
+    font-size: 0.875em
+
+@media only screen and (min-width : 1750px)
+  body
+    font-size: 1em
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5)
+  body
+    font-size: 0.875em
