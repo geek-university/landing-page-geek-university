@@ -50,7 +50,7 @@ $(function ($) {
         var newImage = $(loadedImages[currentImageIndex]);
         newImage.removeClass("inactive").addClass("active");
         newImage.transition({opacity: 0}, 0);
-        newImage.transition({opacity: 1});
+        newImage.transition({opacity: 1}, 1000);
 
         currentImageIndex++;
 

@@ -1,9 +1,18 @@
-$main-color: #ffb93f
-$title-color: #000000
+$primary-color-raw: 'ffb93f'
+$secondary-color-raw: '000000' // #272A63 //#3562a9        1a1c54
+$primary-color: unquote('#' + '#{$primary-color-raw}')
+$secondary-color: unquote('#' + '#{$secondary-color-raw}')
+$primary-background-opacity: '080'
+$secondary-background-opacity: '080'
+$primary-background-transparent: url('bgd-#{$primary-color-raw}-#{$primary-background-opacity}.png')
+$secondary-background-transparent: url('bgd-#{$secondary-color-raw}-#{$secondary-background-opacity}.png')
+
 $tagline-color: #333333
-$text-color: #ffffff
-$title-font-family: 'furoreregular'
+$text-color: ivory
+$title-font-family: 'molotregular'
 $text-font-family: 'nokia_sans_s60regular'
+$margin-between-sections: 2em
+$section-padding: 1em
 
 html, body
   height: 100%
@@ -15,14 +24,6 @@ html, body
   -webkit-box-sizing: border-box
   box-sizing: border-box
   -moz-box-sizing: border-box
-
-.clear-fix:after
-  height: 0
-  clear: both
-  content: " "
-  font-size: 0
-  display: block
-  visibility: hidden
 
 #slider
   background-color: black
@@ -53,6 +54,17 @@ html, body
     &.active
       z-index: -70
 
+.clear-fix:after
+  height: 0
+  clear: both
+  content: " "
+  font-size: 0
+  display: block
+  visibility: hidden
+
+img
+  max-width: 100%
+
 #wrapper
   width: 100%
   height: 100%
@@ -62,13 +74,15 @@ html, body
     display: table-cell
     width: 50%
     vertical-align: middle
-    background-color: $main-color
+    background-color: $primary-color
     text-align: center
     #title
       font-size: 6em
-      color: $title-color
+      color: $secondary-color
       margin: 0.5em 0 0.5em 0
       font-weight: normal
+    #logo
+      width: 300px
     #tagline
       font-size: 3em
       color: $tagline-color
@@ -83,15 +97,18 @@ html, body
     #info_wrapper
       padding: 3em
       #info
+        background: $secondary-background-transparent
+        padding: $section-padding
         width: 20em
         font-size: 1.5em
         margin: 0 auto
         //background-color: black
         color: $text-color
       #subscription
-        margin: 0 auto
+        margin: $margin-between-sections auto 0 auto
+        background: $primary-background-transparent
         width: 30em
-        padding-top: 2em
+        padding: $section-padding
         #subscription_email
           font-family: $text-font-family
           border: none
@@ -100,7 +117,7 @@ html, body
           font-size: 1em
           margin: 0
           float: left
-          width: 22.75em
+          width: 20.75em
           margin-right: 0.25em
         #subscribe_button
           font-family: $text-font-family
@@ -120,7 +137,7 @@ html, body
             background-color: #F9F8F8
             color: #ADA9A5
         #message
-          margin-top: 1em
+          margin-bottom: 1em
           visibility: hidden
           padding: 0.5em
           color: #ffffff
@@ -129,15 +146,21 @@ html, body
           font-size: 1em
           height: 2.5em
       .share_wrapper
-        margin: 1em 0
+        margin: $margin-between-sections auto 0 auto
+        width: 30em
+        padding: $section-padding
+        text-align: center
+        background: $secondary-background-transparent
+        .share_text
+          color: $text-color
+          font-weight: bold
+          font-size: 1.5em
         .share_links
-          text-align: center
           padding: 0
           margin: 0
           a
             padding-right: 0.25em
-            background-color: #000000
-            color: white
+            background-color: $secondary-color
             text-decoration: none
             background-image: image-url("icons8.png")
             width: 64px
@@ -154,7 +177,6 @@ html, body
               background-position: -159px
             &.twitter
               background-position: -238px
-
     #overlay
       z-index: -50
       top: 0
@@ -164,8 +186,8 @@ html, body
       overflow: hidden
       background-attachment: fixed
       background-repeat: repeat
-      background-position: 0 0
-      background: image-url("bgd2.png")
+      background-position: 0px 0px
+      background: url("bgd.png")
 
 @media only screen and (orientation : portrait)
   #wrapper
