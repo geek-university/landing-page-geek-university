@@ -9,7 +9,7 @@ $primary-background-transparent: url('bgd-#{$primary-color-raw}-#{$primary-backg
 $secondary-background-transparent: url('bgd-#{$secondary-color-raw}-#{$secondary-background-opacity}.png')
 
 $text-color: #FFFFF0
-$title-font-family: 'furoreregular'
+$title-font-family: 'nokia_sans_s60regular'
 $text-font-family: 'nokia_sans_s60regular'
 $margin-between-sections: 2em
 $section-padding: 1em
@@ -100,9 +100,7 @@ img
     position: relative
     padding: 6em 0
     #info_wrapper
-      padding: 3em
       margin: 0 auto
-      width: 40em
       #info
         background: $secondary-background-transparent
         padding: $section-padding
@@ -139,21 +137,16 @@ img
           padding: $text-padding
           font-size: $text-size
           margin: 0
-          float: left
-          width: 18.25em
-          margin-right: 0.25em
         #subscribe_button
           height: 2.75em
           font-family: $text-font-family
           border: none
           outline: none
-          width: 7em
           background-color: $text-color
           color: black
           padding: $text-padding
           font-size: $text-size
-          float: left
-          margin: 0
+          margin: 0 0 0 0.25em
           &:hover
             background-color: black
             color: $text-color
@@ -162,7 +155,6 @@ img
             color: #ADA9A5
       .share_wrapper
         margin-top: $margin-between-sections
-        padding: $section-padding
         text-align: center
         background: $secondary-background-transparent
         .share_text
@@ -202,75 +194,99 @@ img
       background-position: 0px 0px
       background: url('bgd-000000-040.png')
 
-@media only screen and (orientation : portrait), only screen and (max-width : 874px)
+@media only screen and (max-width : 1023px)
   #wrapper
     display: block
     #title_container
       display: block
       width: 100%
       padding: 2em
-      height: 22.75em
       .title_wrapper
-        position: relative
         #title
-          padding: 0.25em 0 0 3.125em
           margin: 0 auto
-        #logo
-          position: absolute
-          top: 0
-          left: 0
         #tagline
           margin: 0 auto
-          padding-left: 6.25em
     #info_container
       overflow: hidden
       display: block
       height: 100%
       width: 100%
-      font-size: 1.5em
   #slider
     position: absolute
     left: -50%
     width: 200%
     overflow: hidden
 
-@media only screen and (min-width : 0px) and (max-width : 399px)
-  #logo
-    display: none
-  body
-    font-size: 0.25em
-  #title_container
-    height: auto
-    h1#title
-      padding: 0
-    #tagline
-      padding: 0
-
-@media only screen and (min-width : 400px)
-  body
-    font-size: 0.375em
-  #logo
-    display: inline-block
-
-@media only screen and (min-width : 450px)
+//mobile
+@media only screen and (max-width : 579px)
   body
     font-size: 0.4375em
+    #logo
+      display: none
+    body
+      font-size: 0.25em
+    #title_container
+      height: auto
+      h1#title
+        padding: 0
+      #tagline
+        padding: 0
+    #info_container
+      font-size: 2em
+      .subscription_email_wrapper
+        margin-right: 8em
+        #subscription_email
+          width: 100%
+      #subscribe_button
+        width: 6em
+        float: right
+      .share_wrapper
+        padding: 0.5em
 
-@media only screen and (min-width : 550px)
-  body
-    font-size: 0.5em
+//vertical
+@media only screen and (min-width : 580px) and (max-width : 1023px)
+  #title_container
+    padding: 2em
+    height: 22.75em
+    .title_wrapper
+      position: relative
+      #title
+        padding: 0.25em 0 0 3.125em
+      #logo
+        position: absolute
+        top: 0
+        left: 0
+      #tagline
+        padding-left: 6.25em
+  #info_container
+    font-size: 1.5em
 
-@media only screen and (min-width : 768px)
+@media only screen and (min-width : 580px)
+  #info_wrapper
+    padding: 3em
+    width: 40em
+    #subscription_email
+      float: left
+      width: 18.25em
+    #subscribe_button
+      float: right
+      width: 7em
+    .share_wrapper
+      padding: $section-padding
+
+@media only screen and (min-width : 580px)
   body
     font-size: 0.5625em
 
-@media only screen and (min-width : 875px)
+@media only screen and (min-width : 680px)
   body
     font-size: 0.625em
 
-@media only screen and (min-width : 975px)
+@media only screen and (min-width : 1024px)
   body
     font-size: 0.6875em
+  #logo
+    display: inline-block
 
 @media only screen and (min-width : 1100px)
   body
