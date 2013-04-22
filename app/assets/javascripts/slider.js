@@ -1,5 +1,6 @@
 $(function ($) {
     var slideshowSpeed = 4500;
+    var changeAnimationTime = 600;
 
     var images = [
         {src: "/assets/0c.jpg", width: 1000, height: 1000},
@@ -50,7 +51,7 @@ $(function ($) {
         var newImage = $(loadedImages[currentImageIndex]);
         newImage.removeClass("inactive").addClass("active");
         newImage.transition({opacity: 0}, 0);
-        newImage.transition({opacity: 1}, 1000);
+        newImage.transition({opacity: 1}, changeAnimationTime);
 
         currentImageIndex++;
 
