@@ -1,15 +1,15 @@
 $primary-color-raw: 'ffb93f'
 $secondary-color-raw: '1a1c54' // #272A63 //#3562a9        1a1c54
+$tagline-color: #272A63
 $primary-color: unquote('#' + '#{$primary-color-raw}')
 $secondary-color: unquote('#' + '#{$secondary-color-raw}')
-$primary-background-opacity: '080'
-$secondary-background-opacity: '080'
+$primary-background-opacity: '050'
+$secondary-background-opacity: '050'
 $primary-background-transparent: url('bgd-#{$primary-color-raw}-#{$primary-background-opacity}.png')
 $secondary-background-transparent: url('bgd-#{$secondary-color-raw}-#{$secondary-background-opacity}.png')
 
-$tagline-color: #333333
 $text-color: #FFFFF0
-$title-font-family: 'nokia_sans_s60regular'
+$title-font-family: 'furoreregular'
 $text-font-family: 'nokia_sans_s60regular'
 $margin-between-sections: 2em
 $section-padding: 1em
@@ -82,7 +82,7 @@ img
     #title
       font-size: 6em
       color: $secondary-color
-      margin: 0
+      margin: 0.5em 0
       font-weight: normal
     #logo
       width: 18.75em
@@ -90,7 +90,7 @@ img
     #tagline
       font-size: 3em
       color: $tagline-color
-      margin: 0
+      margin: 0.5em 0
       font-weight: normal
   #info_container
     font-family: $text-font-family
@@ -225,6 +225,7 @@ img
     #info_container
       overflow: hidden
       display: block
+      height: 100%
       width: 100%
       font-size: 1.5em
   #slider
