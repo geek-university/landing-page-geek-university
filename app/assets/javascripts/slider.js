@@ -3,16 +3,17 @@ $(function ($) {
     var changeAnimationTime = 600;
 
     var images = [
-        {src: "/assets/0c.jpg", width: 1000, height: 1000, minWidth: 769},
-/*        {src: "/assets/1c.jpg", width: 628, height: 628, minWidth: 321},*/
-        {src: "/assets/2c.jpg", width: 1000, height: 1000, minWidth: 0},
-        {src: "/assets/3c.jpg", width: 937, height: 937, minWidth: 321},
-        {src: "/assets/4c.jpg", width: 1000, height: 1000, minWidth: 321},
-/*        {src: "/assets/5c.jpg", width: 762, height: 762, minWidth: 0},*/
-        {src: "/assets/6c.jpg", width: 911, height: 911, minWidth: 769},
-        {src: "/assets/7c.jpg", width: 1000, height: 1000, minWidth: 769},
-/*        {src: "/assets/8c.jpg", width: 463, height: 463, minWidth: 0},*/
-        {src: "/assets/9c.jpg", width: 763, height: 763, minWidth: 321}
+        {src: "/assets/0c.jpg", width: 1000, height: 1000, minWidth: 769, maxWidth: Number.POSITIVE_INFINITY},
+/*        {src: "/assets/1c.jpg", width: 628, height: 628, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},*/
+        {src: "/assets/2c.jpg", width: 1000, height: 1000, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},
+        {src: "/assets/2s.jpg", width: 1000, height: 1000, minWidth: 0, maxWidth: 320},
+        {src: "/assets/3c.jpg", width: 937, height: 937, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},
+        {src: "/assets/4c.jpg", width: 1000, height: 1000, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},
+/*        {src: "/assets/5c.jpg", width: 762, height: 762, minWidth: 0, maxWidth: Number.POSITIVE_INFINITY},*/
+        {src: "/assets/6c.jpg", width: 911, height: 911, minWidth: 769, maxWidth: Number.POSITIVE_INFINITY},
+        {src: "/assets/7c.jpg", width: 1000, height: 1000, minWidth: 769, maxWidth: Number.POSITIVE_INFINITY},
+/*        {src: "/assets/8c.jpg", width: 463, height: 463, minWidth: 0, maxWidth: Number.POSITIVE_INFINITY},*/
+        {src: "/assets/9c.jpg", width: 763, height: 763, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY}
     ];
 
     var width = $("#info_container").width();
@@ -25,7 +26,7 @@ $(function ($) {
     function startLoadingImages() {
         for (var i = 0; i < images.length; i++) {
             var imageObject = images[i];
-            if (imageObject.minWidth <= width) {
+            if (imageObject.minWidth <= width && width <= imageObject.maxWidth) {
                 var imageToLoad = new Image();
                 (function (imgObject, index) {
                     imageToLoad.onload = function () {
