@@ -221,28 +221,37 @@ img
 //mobile
 @media only screen and (max-width : 579px)
   body
-    font-size: 0.4375em
-    #logo
-      display: none
-    body
-      font-size: 0.25em
-    #title_container
-      height: auto
-      h1#title
-        padding: 0
-      #tagline
-        padding: 0
-    #info_container
-      font-size: 2em
-      .subscription_email_wrapper
-        margin-right: 8em
-        #subscription_email
-          width: 100%
-      #subscribe_button
-        width: 6em
-        float: right
-      .share_wrapper
-        padding: 0.5em
+    #wrapper
+      font-size: 0.4375em
+      #logo
+        display: none
+      body
+        font-size: 0.25em
+      #title_container
+        height: auto
+        h1#title
+          padding: 0
+        #tagline
+          padding: 0
+      #info_container
+        font-size: 2em
+        #info_wrapper
+          #subscription
+            .subscription_text_wrapper
+              .subscription_text
+                font-size: 1.15em
+            .subscription_email_wrapper
+              margin-right: 8em
+              #subscription_email
+                width: 100%
+            #subscribe_button
+              width: 6em
+              float: right
+          .share_wrapper
+            padding: 0.5em
+
+
+
 
 //iphone
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5)
