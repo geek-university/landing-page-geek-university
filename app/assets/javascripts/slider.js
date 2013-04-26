@@ -3,17 +3,17 @@ $(function ($) {
     var changeAnimationTime = 600;
 
     var images = [
-        {src: "/assets/0c.jpg", width: 1000, height: 1000, minWidth: 769, maxWidth: Number.POSITIVE_INFINITY},
-/*        {src: "/assets/1c.jpg", width: 628, height: 628, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},*/
-        {src: "/assets/2c.jpg", width: 1000, height: 1000, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},
-        {src: "/assets/2s.jpg", width: 1000, height: 1000, minWidth: 0, maxWidth: 320},
-        {src: "/assets/3c.jpg", width: 937, height: 937, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},
-        {src: "/assets/4c.jpg", width: 1000, height: 1000, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},
-/*        {src: "/assets/5c.jpg", width: 762, height: 762, minWidth: 0, maxWidth: Number.POSITIVE_INFINITY},*/
-        {src: "/assets/6c.jpg", width: 911, height: 911, minWidth: 769, maxWidth: Number.POSITIVE_INFINITY},
-        {src: "/assets/7c.jpg", width: 1000, height: 1000, minWidth: 769, maxWidth: Number.POSITIVE_INFINITY},
-/*        {src: "/assets/8c.jpg", width: 463, height: 463, minWidth: 0, maxWidth: Number.POSITIVE_INFINITY},*/
-        {src: "/assets/9c.jpg", width: 763, height: 763, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY}
+        {src: "/assets/0cbgd.jpg", width: 1000, height: 1000, minWidth: 769, maxWidth: Number.POSITIVE_INFINITY},
+/*        {src: "/assets/1cbgd.jpg", width: 628, height: 628, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},*/
+        {src: "/assets/2cbgd.jpg", width: 1000, height: 1000, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},
+        {src: "/assets/2sbgd.jpg", width: 1000, height: 1000, minWidth: 0, maxWidth: 320},
+        {src: "/assets/3cbgd.jpg", width: 937, height: 937, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},
+        {src: "/assets/4cbgd.jpg", width: 1000, height: 1000, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY},
+/*        {src: "/assets/5cbgd.jpg", width: 762, height: 762, minWidth: 0, maxWidth: Number.POSITIVE_INFINITY},*/
+        {src: "/assets/6cbgd.jpg", width: 911, height: 911, minWidth: 769, maxWidth: Number.POSITIVE_INFINITY},
+        {src: "/assets/7cbgd.jpg", width: 1000, height: 1000, minWidth: 769, maxWidth: Number.POSITIVE_INFINITY},
+/*        {src: "/assets/8cbgd.jpg", width: 463, height: 463, minWidth: 0, maxWidth: Number.POSITIVE_INFINITY},*/
+        {src: "/assets/9cbgd.jpg", width: 763, height: 763, minWidth: 321, maxWidth: Number.POSITIVE_INFINITY}
     ];
 
     var width = $("#info_container").width();
